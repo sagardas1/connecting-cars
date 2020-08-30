@@ -39,12 +39,11 @@ public class FileController {
 		// return dataConversion.convertJSONToCSV(data);
 	}
 
-	
 	@GetMapping("/readFile")
-	public String readFile(@RequestParam(value="file")String file,
-			@RequestHeader(value="fileType")String fileType) throws IOException, JAXBException{
-		return userService2.readFile(file,fileType);
-		
+	public String readFile(@RequestParam(value = "file") String file,
+			@RequestHeader(value = "fileType") String fileType) throws IOException, JAXBException {
+		return userService2.readFile(file, fileType);
+
 	}
-	
+
 }
