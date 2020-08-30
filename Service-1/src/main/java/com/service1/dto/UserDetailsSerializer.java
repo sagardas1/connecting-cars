@@ -6,12 +6,12 @@ import org.apache.kafka.common.serialization.Serializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class UserDetailsSerializer implements Serializer<UserDetails>{
+public class UserDetailsSerializer implements Serializer<UserDetails> {
 
 	@Override
 	public void configure(Map<String, ?> configs, boolean isKey) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class UserDetailsSerializer implements Serializer<UserDetails>{
 	@Override
 	public void close() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
