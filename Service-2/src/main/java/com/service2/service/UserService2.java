@@ -31,8 +31,7 @@ public class UserService2 {
 	@KafkaListener(topics = "test", groupId = "group_id")
 	public void consume(String encryptedData) throws IOException {
 
-	String dycryptedData = encryptDycryptConfig.decrypt(encryptedData);
-
+		String dycryptedData = encryptDycryptConfig.decrypt(encryptedData);
 
 		HashMap<String, Object> results = new ObjectMapper().readValue(encryptedData, HashMap.class);
 
