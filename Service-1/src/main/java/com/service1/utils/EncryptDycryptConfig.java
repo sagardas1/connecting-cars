@@ -1,19 +1,16 @@
 package com.service1.utils;
 
 
-import org.springframework.context.annotation.Configuration;
-
-import com.google.gson.Gson;
-import com.service1.dto.UserDetails;
-
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
- 
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+
+import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class EncryptDycryptConfig {
