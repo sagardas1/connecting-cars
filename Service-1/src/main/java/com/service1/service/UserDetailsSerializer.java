@@ -1,10 +1,10 @@
-package com.service1.dto;
+package com.service1.service;
 
 import java.util.Map;
 
 import org.apache.kafka.common.serialization.Serializer;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.service1.dto.UserDetails;
 
 public class UserDetailsSerializer implements Serializer<UserDetails> {
 
@@ -16,17 +16,8 @@ public class UserDetailsSerializer implements Serializer<UserDetails> {
 
 	@Override
 	public byte[] serialize(String topic, UserDetails data) {
-		byte[] retVal = null;
-		final ObjectMapper mapper = new ObjectMapper();
-
-		try {
-			retVal = mapper.writeValueAsString(data).getBytes();
-		} catch (Exception ee) {
-			ee.printStackTrace();
-
-		}
-
-		return retVal;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

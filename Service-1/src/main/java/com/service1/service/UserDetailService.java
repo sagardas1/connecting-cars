@@ -25,7 +25,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.service1.dto.UserDetails;
-import com.service1.dto.UserDetailsSerializer;
 import com.service1.utils.EncryptDycryptConfig;
 
 @Service
