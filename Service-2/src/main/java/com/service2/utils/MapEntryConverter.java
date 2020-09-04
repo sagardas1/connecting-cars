@@ -12,14 +12,16 @@ import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
 
 public class MapEntryConverter implements Converter {
 
-	public boolean canConvert(Class clazz) {
+	public boolean canConvert(@SuppressWarnings("rawtypes") Class clazz) {
 		return AbstractMap.class.isAssignableFrom(clazz);
 	}
 
 	public void marshal(Object value, HierarchicalStreamWriter writer, MarshallingContext context) {
 
+		@SuppressWarnings("rawtypes")
 		AbstractMap map = (AbstractMap) value;
 		for (Object obj : map.entrySet()) {
+			@SuppressWarnings("rawtypes")
 			Map.Entry entry = (Map.Entry) obj;
 			writer.startNode(entry.getKey().toString());
 			Object val = entry.getValue();
