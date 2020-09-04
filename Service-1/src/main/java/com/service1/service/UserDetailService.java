@@ -84,6 +84,7 @@ public class UserDetailService {
 		ObjectMapper mapper = new ObjectMapper();
 
 		// convert JSON string to Map
+		@SuppressWarnings("unchecked")
 		Map<String, Object> map = mapper.readValue(new Gson().toJson(dycryptedData), Map.class);
 
 		return map;
@@ -105,6 +106,7 @@ public class UserDetailService {
 
 		String data = encryptDycryptConfig.decrypt(a.toString());
 		ObjectMapper mapper = new ObjectMapper();
+		@SuppressWarnings("unchecked")
 		Map<String, Object> map = mapper.readValue(data, Map.class);
 
 		return map;
