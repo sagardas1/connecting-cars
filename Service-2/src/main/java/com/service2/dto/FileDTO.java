@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 
 public class FileDTO {
-	
 
 	private List<Map<String, Object>> fileName;
 
@@ -22,5 +21,4 @@ public class FileDTO {
 //	}
 //	
 
-	
 }
