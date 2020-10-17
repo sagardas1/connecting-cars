@@ -18,37 +18,33 @@ import com.service1.service.UserDetailService;
 
 @RestController
 public class FileController {
-	
+
 	@Autowired
 	UserDetailService userDetailService;
-	
 
-	
 	@GetMapping("/test")
 	public String test() {
 		return "Request coming in Service1";
 	}
-	
-	@PostMapping(value="/save",headers="Accept=application/json")
-	public String saveUserDetails(@RequestBody UserDetails user,
-			@RequestHeader("fileType") String fileType,
+
+	@PostMapping(value = "/save", headers = "Accept=application/json")
+	public String saveUserDetails(@RequestBody UserDetails user, @RequestHeader("fileType") String fileType,
 			@RequestHeader(value = "file", required = false) String file) {
-	 userDetailService.saveUserDetails(user,fileType,file);
-		
+		userDetailService.saveUserDetails(user, fileType, file);
+
 		return "not";
-		
+
 	}
 
 	@GetMapping("/readFile")
-	public Map<String,Object> readFile(@RequestParam(value="file")String file,
-			@RequestHeader(value="fileType")String fileType) throws IOException, JAXBException{
-		return userDetailService.read(file,fileType);
-		
+	public Map<String, Object> readFile(@RequestParam(value = "file") String file,
+			@RequestHeader(value = "fileType") String fileType) throws IOException, JAXBException {
+		return userDetailService.read(file, fileType);
+
 	}
-	
-	@PostMapping(value="/getval",headers="Accept=application/json")
-	public String getval(@RequestBody UserDetails details,
-			@RequestParam (value="name")String name) {
+
+	@PostMapping(value = "/getval", headers = "Accept=application/json")
+	public String getval(@RequestBody UserDetails details, @RequestParam(value = "name") String name) {
 		return "done";
 	}
 }
