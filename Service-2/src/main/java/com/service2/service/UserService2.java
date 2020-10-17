@@ -19,6 +19,7 @@ import com.service2.utils.EncryptDycryptConfig;
 public class UserService2 {
 	@Autowired
 	EncryptDycryptConfig encryptDycryptConfig;
+	
 
 	@Autowired
 	DataConversion dataConversion;
