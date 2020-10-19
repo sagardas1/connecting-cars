@@ -27,6 +27,7 @@ public class FileController {
 		return "Request coming in Service1";
 	}
 
+	
 	@PostMapping(value = "/save", headers = "Accept=application/json")
 	public String saveUserDetails(@RequestBody UserDetails user, @RequestHeader("fileType") String fileType,
 			@RequestHeader(value = "file", required = false) String file) {
