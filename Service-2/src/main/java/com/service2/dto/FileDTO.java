@@ -15,11 +15,4 @@ public class FileDTO {
 		this.fileName = fileName;
 	}
 
-	
-//	@Override
-//	public String toString() {
-//		return "{fileName:" + fileName + "}";
-//	}
-//	
-
 }
