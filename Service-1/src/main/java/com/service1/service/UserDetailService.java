@@ -43,6 +43,7 @@ public class UserDetailService {
 	public String saveUserDetails(UserDetails userDetails, String fileType, String file) {
 
 		final JsonObject json = new JsonObject();
+		
 
 		json.addProperty("fileType", fileType);
 		json.addProperty("file", file);
