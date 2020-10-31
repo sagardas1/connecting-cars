@@ -7,7 +7,7 @@ public class UserDetails {
 	private int age;
 
 	
-	
+
 	
 	public String getName() {
 		return name;
