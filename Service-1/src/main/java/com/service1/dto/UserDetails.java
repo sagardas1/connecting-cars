@@ -6,6 +6,7 @@ public class UserDetails {
 	private String salary;
 	private int age;
 
+	
 	public String getName() {
 		return name;
 	}
